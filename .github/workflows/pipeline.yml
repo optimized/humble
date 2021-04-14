@@ -1,0 +1,28 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        service: [constructs, server]
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Use Node 10
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+
+    - name: install
+      working-directory: ${{matrix.service}}
+      run: npm i
+
+    - name: test
+      working-directory: ${{matrix.service}}
+      run: npm run test
+

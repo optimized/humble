@@ -1,7 +1,5 @@
-# Humble
-## Pulumi Constructs for Apollo/React Developers
-
-Based upon umble https://github.com/Lepozepo/umble
+# Umble
+## Humble Pulumi Constructs for Apollo/React Developers
 
 ### Constructs
 
